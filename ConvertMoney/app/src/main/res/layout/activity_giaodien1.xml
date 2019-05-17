@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="20.25">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.25">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="#5D0FAA"
+            android:fontFamily="@font/calibrib"
+            android:gravity="center"
+            android:shadowColor="#F1F1F1"
+            android:text="Unit Converter"
+            android:textColor="#fff"
+            android:textSize="50dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="18"
+        android:background="#F0F0F0"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#0920F3"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            // Data Storage
+
+            <LinearLayout
+                android:id="@+id/data"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="3"
+                    app:srcCompat="@drawable/store" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/calibrib"
+                    android:gravity="center"
+                    android:text="Data Storage"
+                    android:textColor="#000"
+                    android:textSize="27sp" />
+            </LinearLayout>
+
+            // Temperature
+
+            <LinearLayout
+                android:id="@+id/tem"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="3"
+                    app:srcCompat="@drawable/unnamed" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/calibrib"
+                    android:gravity="center"
+                    android:text="Temperature"
+                    android:textColor="#000"
+                    android:textSize="27sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#0920F3"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            // Weight
+
+            <LinearLayout
+                android:id="@+id/weight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="3"
+                    app:srcCompat="@drawable/weight" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/calibrib"
+                    android:gravity="center"
+                    android:text="Weight"
+                    android:textColor="#000"
+                    android:textSize="27sp" />
+            </LinearLayout>
+
+            // Currency
+
+            <LinearLayout
+                android:id="@+id/currency"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="3"
+                    app:srcCompat="@drawable/currency" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/calibrib"
+                    android:gravity="center"
+                    android:text="Currency"
+                    android:textColor="#000"
+                    android:textSize="27sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#0920F3"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            // Length
+
+            <LinearLayout
+                android:id="@+id/length"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="3"
+                    app:srcCompat="@drawable/lenght" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/calibrib"
+                    android:gravity="center"
+                    android:text="Length"
+                    android:textColor="#000"
+                    android:textSize="27sp" />
+            </LinearLayout>
+
+            // Time
+
+            <LinearLayout
+                android:id="@+id/time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="3"
+                    app:srcCompat="@drawable/bmi" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/calibrib"
+                    android:gravity="center"
+                    android:text="BMI"
+                    android:textColor="#000"
+                    android:textSize="27sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

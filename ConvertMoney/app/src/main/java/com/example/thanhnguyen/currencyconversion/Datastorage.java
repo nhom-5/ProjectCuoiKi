@@ -1,5 +1,6 @@
 package com.example.thanhnguyen.currencyconversion;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,8 +30,8 @@ public class Datastorage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_datastore);
-//        ActionBar actionBar = getSupportActionBar();
-//        actionBar.hide();
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         Spinner spin1 = (Spinner) findViewById(R.id.FormList);
         select1 = findViewById(R.id.select1);
         select2 = findViewById(R.id.select2);

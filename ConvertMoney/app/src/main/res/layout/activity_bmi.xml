@@ -3,10 +3,9 @@
 <LinearLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:weightSum="20.25">
 
@@ -14,90 +13,96 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2.25">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="5dp"
-            android:background="#673AB7"
-            android:fontFamily="@font/calibrib"
-            android:gravity="center"
-            android:shadowColor="#F1F1F1"
-            android:text="BMI"
-            android:textColor="#fff"
-            android:textSize="40sp" />
+            android:background="@drawable/title" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="18"
-        android:background="#F0F0F0"
+        android:background="@drawable/body"
         android:orientation="vertical"
         android:weightSum="10">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3"
+            android:layout_weight="4"
             android:orientation="vertical"
             tools:context=".BMI">
 
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Cân nặng của bạn là ?"
+                android:textColor="#03FA0D" />
+
             <EditText
                 android:id="@+id/nhapki"
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:ems="10"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/botron"
                 android:hint="Nhập cân nặng(kg)"
                 android:inputType="number" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Chiều cao của bạn là ?"
+                android:textColor="#03FA0D" />
+
             <EditText
                 android:id="@+id/nhapcao"
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:ems="10"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/botron"
                 android:hint="Nhập chiều cao(cm)"
                 android:inputType="number" />
         </LinearLayout>
-        <LinearLayout
 
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center">
 
             <Button
                 android:id="@+id/nut"
-                android:layout_width="350dp"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button"
+                android:layout_gravity="center"
+                android:background="@drawable/chuyendoi"
                 android:fontFamily="@font/calibrib"
-                android:gravity="center"
-                android:padding="15dp"
                 android:text="CHUYỂN ĐỔI"
-                android:textColor="#fff"
-                android:textSize="30sp" />
+                android:textColor="#fff" />
+
         </LinearLayout>
-        <LinearLayout
-            android:layout_weight="5"
+
+
+        <TextView
+            android:id="@+id/showketqua"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:textColor="#03FA0D"
+            android:textSize="30sp" />
 
-            <TextView
-                android:id="@+id/ketqua"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="KẾT QUẢ"
-                android:textSize="30sp"
-                android:gravity="center" />
-            <TextView
-                android:id="@+id/showketqua"
-                android:layout_width="match_parent"
-                android:layout_height="275dp"
-                android:textSize="30sp"
-                android:gravity="center" />
 
-        </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>

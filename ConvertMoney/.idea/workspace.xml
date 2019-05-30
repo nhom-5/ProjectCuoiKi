@@ -34,8 +34,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a3f9dbf-e953-4084-8b9b-818ebb72bf50" name="Default" comment="">
+    <list default="true" id="8a3f9dbf-e953-4084-8b9b-818ebb72bf50" name="Default" comment="update BMI">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/thanhnguyen/currencyconversion/BMI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/thanhnguyen/currencyconversion/BMI.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,12 +86,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/thanhnguyen/currencyconversion/BMI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="391">
+              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#865#2581#0" expanded="true" />
-                <element signature="e#2580#2581#0" expanded="true" />
+                <element signature="e#1141#2900#0" expanded="true" />
+                <element signature="e#2899#2900#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -228,10 +235,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="857" />
+    <option name="y" value="11" />
     <option name="width" value="974" />
-    <option name="height" value="1087" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -287,7 +295,7 @@
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="Nexus_5X_API_28" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Project/ChuyenDoiDonVi" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -407,14 +415,22 @@
       <option name="presentableId" value="Default" />
       <updated>1547004635265</updated>
     </task>
+    <task id="LOCAL-00001" summary="update BMI">
+      <created>1559223767137</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1559223767137</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="857" y="11" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Resources Explorer" order="0" weight="0.32995737" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.10181237" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20897156" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Captures" order="3" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="4" />
@@ -433,7 +449,7 @@
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Logcat" order="10" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.32917964" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.34682712" />
       <window_info anchor="bottom" id="Terminal" order="12" />
       <window_info anchor="right" id="Preview" order="0" weight="0.28118163" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
@@ -679,12 +695,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/thanhnguyen/currencyconversion/BMI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        <state relative-caret-position="391">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#865#2581#0" expanded="true" />
-            <element signature="e#2580#2581#0" expanded="true" />
+            <element signature="e#1141#2900#0" expanded="true" />
+            <element signature="e#2899#2900#0" expanded="true" />
           </folding>
         </state>
       </provider>

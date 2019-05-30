@@ -11,6 +11,7 @@ import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -74,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         processCopyDatabaseFromAssetIntoSystem();
 
         addControls();
@@ -376,14 +378,11 @@ public class MainActivity extends AppCompatActivity {
                     currency.setPrice(item.getString("banck"));
                     currencies.add(currency);
                 }
-
-
             }catch (Exception ex){
                 Log.e("ERROR",ex.toString());
             }
             return currencies;
         }
-
         @Override
         protected void onProgressUpdate(Void... values) {
             super.onProgressUpdate(values);

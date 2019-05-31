@@ -43,7 +43,7 @@
                 android:layout_weight="0"
                 android:ems="10"
                 android:hint="Nhập số lượng cần chuyển"
-                android:inputType="number" />
+                android:inputType="numberDecimal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:ems="10"
-                android:hint="Nhập số lượng cần chuyển"
+                android:hint="Kết quả của bạn"
                 android:inputType="number"
                 android:textSize="20dp" />
 

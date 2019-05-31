@@ -15,8 +15,8 @@ import android.widget.Toast;
 public class Length extends AppCompatActivity {
 
     String ketqua1 = "", ketqua2 = "";
-    double et1;
-    long et2;
+    String result;
+    float et1;
     EditText edit1;
     TextView edit2,select1, select2;
     Button btn;
@@ -26,6 +26,8 @@ public class Length extends AppCompatActivity {
             "Dm",
             "Cm",
             "Mm",
+            "Hải lý",
+            "inch",
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,62 +91,174 @@ public class Length extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if ((edit1.getText().toString()).equals("")){
+                if ((edit1.getText().toString()).equals("")) {
                     Toast.makeText(Length.this, "Bạn chưa nhập giá trị cần chuyển đổi", Toast.LENGTH_SHORT).show();
-                }
-                else {
+                } else {
                     //kết quả 1 giảm dần
-                    if (ketqua1.equals("Km") && ketqua2.equals("Mm")) {
-                        et2 = (long) 1000*1000 * Integer.parseInt(edit1.getText().toString());
-                        edit2.setText(String.valueOf(et2));
+
+                    //doi don vi hai ly giam dan
+                    if (ketqua1.equals("Hải lý") && ketqua2.equals("Km")) {
+                        et1 = 1852 * Float.parseFloat(edit1.getText().toString()) / 1000;
+
                     }
-                    if (ketqua1.equals("Km") && ketqua2.equals("Cm")) {
-                        et2 = (long) 1000*100 * Integer.parseInt(edit1.getText().toString());
-                        edit2.setText(String.valueOf(et2));
+                    else if (ketqua1.equals("Hải lý") && ketqua2.equals("M")) {
+                        et1 = 1852 * Float.parseFloat(edit1.getText().toString());
+
                     }
-                    if (ketqua1.equals("Km") && ketqua2.equals("Dm")) {
-                        et2 = (long) 1000*10 * Integer.parseInt(edit1.getText().toString());
-                        edit2.setText(String.valueOf(et2));
+                    else if (ketqua1.equals("Hải lý") && ketqua2.equals("Dm")) {
+                        et1 = 1852 * 10 * Float.parseFloat(edit1.getText().toString());
+
                     }
-                    if ((ketqua1.equals("KM") && ketqua2.equals("M")) || (ketqua1.equals("M") && ketqua2.equals("Mm"))) {
-                        et2 = (long) 1000 * Integer.parseInt(edit1.getText().toString());
-                        edit2.setText(String.valueOf(et2));
+                    else if (ketqua1.equals("Hải lý") && ketqua2.equals("Cm")) {
+                        et1 = 1852 * 100 * Float.parseFloat(edit1.getText().toString());
+
                     }
-                    if ((ketqua1.equals("M") && ketqua2.equals("Dm")) || (ketqua1.equals("Dm") && ketqua2.equals("Cm"))|| (ketqua1.equals("Cm") && ketqua2.equals("Mm"))) {
-                        et2 = (long) 10 * Integer.parseInt(edit1.getText().toString());
-                        edit2.setText(String.valueOf(et2));
+                    else if (ketqua1.equals("Hải lý") && ketqua2.equals("Mm")) {
+                        et1 = 1852 * 1000 * Float.parseFloat(edit1.getText().toString());
+
                     }
-                    if ((ketqua1.equals("M") && ketqua2.equals("Cm")) || (ketqua1.equals("Dm") && ketqua2.equals("Mm"))) {
-                        et2 = (long) 100 * Integer.parseInt(edit1.getText().toString());
-                        edit2.setText(String.valueOf(et2));
+                    else if (ketqua1.equals("Hải lý") && ketqua2.equals("inch")) {
+                        et1 = 1852 * 10000 * Float.parseFloat(edit1.getText().toString()) / 254;
+
+
                     }
-                    if ((ketqua1.equals("Km") && ketqua2.equals("Km")) || (ketqua1.equals("M") && ketqua2.equals("M")) || (ketqua1.equals("Cm") && ketqua2.equals("Cm")) || (ketqua1.equals("Dm") && ketqua2.equals("Dm"))|| (ketqua1.equals("Mm") && ketqua2.equals("Mm"))) {
+
+                    //doi tu inch giam dan
+                    else if (ketqua1.equals("inch") && ketqua2.equals("Km")) {
+                        et1 = 254 * Float.parseFloat(edit1.getText().toString()) / (10000*1000);
+
+                    }
+                    else if (ketqua1.equals("inch") && ketqua2.equals("M")) {
+                        et1 = 254 * Float.parseFloat(edit1.getText().toString()) / 10000;
+
+                    }
+                    else if (ketqua1.equals("inch") && ketqua2.equals("Dm")) {
+                        et1 = 254 * Float.parseFloat(edit1.getText().toString()) / 1000;
+
+                    }
+                    else if (ketqua1.equals("inch") && ketqua2.equals("Cm")) {
+                        et1 = 254 * Float.parseFloat(edit1.getText().toString()) / 100;
+
+                    }
+                    else if (ketqua1.equals("inch") && ketqua2.equals("Mm")) {
+                        et1 = 254 * Float.parseFloat(edit1.getText().toString()) / 10;
+
+                    }
+                    else if (ketqua1.equals("inch") && ketqua2.equals("Hải lý")) {
+                        et1 = 254 * Float.parseFloat(edit1.getText().toString()) / (10000*1852);
+
+                    }
+
+                    //doi tu km
+
+                    else if (ketqua1.equals("Km") && ketqua2.equals("Mm")) {
+                        et1 = 1000 * 1000 * Float.parseFloat(edit1.getText().toString());
+
+                    }
+                    else if (ketqua1.equals("Km") && ketqua2.equals("Cm")) {
+                        et1 = 1000 * 100 * Float.parseFloat(edit1.getText().toString());
+
+                    }
+                    else if (ketqua1.equals("Km") && ketqua2.equals("Dm")) {
+                        et1 = 1000 * 10 * Float.parseFloat(edit1.getText().toString());
+
+                    }
+                    else if ((ketqua1.equals("Km") && ketqua2.equals("M")) || (ketqua1.equals("M") && ketqua2.equals("Mm"))) {
+                        et1 = 1000 * Float.parseFloat(edit1.getText().toString());
+
+                    }
+                    else if ((ketqua1.equals("M") && ketqua2.equals("Dm")) || (ketqua1.equals("Dm") && ketqua2.equals("Cm")) || (ketqua1.equals("Cm") && ketqua2.equals("Mm"))) {
+                        et1 = 10 * Float.parseFloat(edit1.getText().toString());
+
+                    }
+                    else if ((ketqua1.equals("M") && ketqua2.equals("Cm")) || (ketqua1.equals("Dm") && ketqua2.equals("Mm"))) {
+                        et1 = 100 * Float.parseFloat(edit1.getText().toString());
+
+                    }
+                    else if ((ketqua1.equals("Km") && ketqua2.equals("Km")) || (ketqua1.equals("M") && ketqua2.equals("M")) || (ketqua1.equals("Cm") && ketqua2.equals("Cm")) || (ketqua1.equals("Dm") && ketqua2.equals("Dm")) || (ketqua1.equals("Mm") && ketqua2.equals("Mm")) || (ketqua1.equals("inch") && ketqua2.equals("inch")) || (ketqua1.equals("Hải lý") && ketqua2.equals("Hải lý"))) {
                         Toast.makeText(Length.this, "Cùng đơn vị thì đổi cái giề ?", Toast.LENGTH_SHORT).show();
                     }
                     //kết quả 1 tăng dần
-                    if (ketqua1.equals("Mm") && ketqua2.equals("Km")) {
-                        et1 = (double) Integer.parseInt(edit1.getText().toString()) /(1000*1000);
-                        edit2.setText(String.valueOf(et1));
+
+                    //doi hai ly tang dan
+
+                    else if (ketqua1.equals("Km") && ketqua2.equals("Hải lý")) {
+                        et1 = 1000 * Float.parseFloat(edit1.getText().toString()) / 1852;
+
                     }
-                    if (ketqua1.equals("Cm") && ketqua2.equals("Km")) {
-                        et1 = (double) Integer.parseInt(edit1.getText().toString()) /(1000*100);
-                        edit2.setText(String.valueOf(et1));
+                    else if (ketqua1.equals("M") && ketqua2.equals("Hải lý")) {
+                        et1 = Float.parseFloat(edit1.getText().toString()) / 1852;
+
                     }
-                    if (ketqua1.equals("Dm") && ketqua2.equals("Km")) {
-                        et1 = (double) Integer.parseInt(edit1.getText().toString()) /(1000*10);
-                        edit2.setText(String.valueOf(et1));
+                    else if (ketqua1.equals("Dm") && ketqua2.equals("Hải lý")) {
+                        et1 = 10 * Float.parseFloat(edit1.getText().toString()) / 1852;
+
                     }
-                    if ((ketqua1.equals("M") && ketqua2.equals("Km"))|| (ketqua1.equals("Mm") && ketqua2.equals("M"))) {
-                        et1 = (double) Integer.parseInt(edit1.getText().toString()) /1000;
-                        edit2.setText(String.valueOf(et1));
+                    else if (ketqua1.equals("Cm") && ketqua2.equals("Hải lý")) {
+                        et1 = 100 * Float.parseFloat(edit1.getText().toString()) / 1852;
+
                     }
-                    if ((ketqua1.equals("Mm") && ketqua2.equals("Dm"))|| (ketqua1.equals("Cm") && ketqua2.equals("M"))) {
-                        et1 = (double) Integer.parseInt(edit1.getText().toString()) /100;
-                        edit2.setText(String.valueOf(et1));
+                    else if (ketqua1.equals("Mm") && ketqua2.equals("Hải lý")) {
+                        et1 = 1000 * Float.parseFloat(edit1.getText().toString()) / 1852;
+
                     }
-                    if ((ketqua1.equals("Mm") && ketqua2.equals("Cm"))|| (ketqua1.equals("Cm") && ketqua2.equals("Dm"))|| (ketqua1.equals("Dm") && ketqua2.equals("M"))) {
-                        et1 = (double) Integer.parseInt(edit1.getText().toString()) /10;
-                        edit2.setText(String.valueOf(et1));
+
+                    //doi inch tang dan
+
+                    else if (ketqua1.equals("Km") && ketqua2.equals("inch")) {
+                        et1 = 1000 * 10000 * Float.parseFloat(edit1.getText().toString()) / 254;
+
+                    }
+                    else if (ketqua1.equals("M") && ketqua2.equals("inch")) {
+                        et1 = 10000 * Float.parseFloat(edit1.getText().toString()) / 254;
+
+                    }
+                    else if (ketqua1.equals("Dm") && ketqua2.equals("inch")) {
+                        et1 = 10000 * Float.parseFloat(edit1.getText().toString()) / (254 * 10);
+
+                    }
+                    else if (ketqua1.equals("Cm") && ketqua2.equals("inch")) {
+                        et1 = 10000 * Float.parseFloat(edit1.getText().toString()) / (254 * 100);
+
+                    }
+                    else if (ketqua1.equals("Mm") && ketqua2.equals("inch")) {
+                        et1 = 10000 * Float.parseFloat(edit1.getText().toString()) / (254 * 1000);
+
+                    }
+
+                    // doi km tang dan
+                    else if (ketqua1.equals("Mm") && ketqua2.equals("Km")) {
+                        et1 = Float.parseFloat(edit1.getText().toString()) / (1000 * 1000);
+
+                    }
+                    else if (ketqua1.equals("Cm") && ketqua2.equals("Km")) {
+                        et1 = Float.parseFloat(edit1.getText().toString()) / (1000 * 100);
+
+                    }
+                    else if (ketqua1.equals("Dm") && ketqua2.equals("Km")) {
+                        et1 = Float.parseFloat(edit1.getText().toString()) / (1000 * 10);
+
+                    }
+                    else if ((ketqua1.equals("M") && ketqua2.equals("Km")) || (ketqua1.equals("Mm") && ketqua2.equals("M"))) {
+                        et1 = Float.parseFloat(edit1.getText().toString()) / 1000;
+
+                    }
+                    else if ((ketqua1.equals("Mm") && ketqua2.equals("Dm")) || (ketqua1.equals("Cm") && ketqua2.equals("M"))) {
+                        et1 = Float.parseFloat(edit1.getText().toString()) / 100;
+
+                    }
+                    else if ((ketqua1.equals("Mm") && ketqua2.equals("Cm")) || (ketqua1.equals("Cm") && ketqua2.equals("Dm")) || (ketqua1.equals("Dm") && ketqua2.equals("M"))) {
+                        et1 = Float.parseFloat(edit1.getText().toString()) / 10;
+
+                    }
+//
+                    result = Float.toString(et1);
+                    if(result.split("\\.0").length == 1){
+
+                        edit2.setText(result.split("\\.0")[0]);
+                    }
+                    else{
+                        edit2.setText(result);
                     }
                 }
 
